@@ -14,8 +14,11 @@ interface StoreState {
     checkCard: (id: Option['id']) => void
 }
 
+const createInitCards = () => mixCards(createOptions(options))
+const createInitExtraCards = () => [...mixCards(createOptions(extraOption)), ...createInitCards()]
+
 export const useStore = create<StoreState>((set, get) => ({
-    cards: mixCards(createOptions(options)),
+    cards: createInitCards(),
     selectedCards: [],
     isActive: false,
     isChecking: false,
@@ -29,8 +32,7 @@ export const useStore = create<StoreState>((set, get) => ({
 
     remixCards: () => {
         const {level } = get()
-        const newCards = level === 1 ? mixCards(createOptions(options)) : mixCards(createOptions([...options, ...extraOption]));
-
+        const newCards = level === 1 ? createInitCards() : createInitExtraCards();
         set({
             cards: newCards,
             selectedCards: [],
@@ -39,7 +41,6 @@ export const useStore = create<StoreState>((set, get) => ({
 
     compareCards: () => set((state) => {
         const isCompered = state.selectedCards[0].label === state.selectedCards[1].label;
-
         const comparedCards = state.cards.map((card) => {
             if (card.id === state.selectedCards[0].id || card.id === state.selectedCards[1].id) {
                 return isCompered
@@ -48,13 +49,11 @@ export const useStore = create<StoreState>((set, get) => ({
             }
             return card;
         });
-
         return {
             cards: comparedCards,
             selectedCards: [],
         };
     }),
-
 
     checkCard: (id: string) => set((state) => {
         const isDuplicate = state.selectedCards.find((card) => card.id === id);
@@ -67,5 +66,4 @@ export const useStore = create<StoreState>((set, get) => ({
             selectedCards: refreshSelectedCards,
         };
     }),
-
 }));

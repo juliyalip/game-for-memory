@@ -6,8 +6,7 @@ import style from './controlSection.module.scss'
 
 const ControlSection = () => {
   
-  const { isActive, setLevel, setIsActive, remixCards, cards, selectedCards } =
-    useStore();
+  const { isActive, setLevel, setIsActive,  cards, selectedCards } = useStore();
 
   const isChecking = selectedCards.length === 2;
   const isGameOver = cards.every((card) => card.removed);
@@ -21,20 +20,16 @@ const ControlSection = () => {
     setLevel(level);
   };
 
-  
-
   const stopGame = useCallback(() => {
     if (!isActive) {
       return;
     }
     setIsActive(false);
-    remixCards();
-  }, [isActive,  setIsActive , remixCards]);
+  }, [isActive,  setIsActive ]);
 
   useEffect(() => {
     if (isGameOver) {
       stopGame();
-   
     }
   }, [isGameOver, stopGame]);
 
@@ -56,5 +51,4 @@ const ControlSection = () => {
     </div>
   );
 };
-
 export default ControlSection;

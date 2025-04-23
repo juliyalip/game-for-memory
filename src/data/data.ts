@@ -14,7 +14,6 @@ export const options: Omit<Option, 'id'>[] = [
     { option: '🍌', label: "banana", removed: false, checked: false },
 ]
 
-
 export const extraOption = [
 { option: "🌍", label: "earth", checked: false,  removed: false },
 ]

@@ -2,7 +2,6 @@
 
 .container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
   gap: 0;
   width: 100%;
   margin-top: 0;
@@ -11,6 +10,18 @@
 
   @media screen and (min-width: $tablet-size) {
     grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.gridLevel1{
+  @media screen and (max-width: $tablet-size) {
+    grid-template-columns: repeat(5, 1fr);
+    
+  }
+}
+.gridLevel2{
+  @media screen and (max-width: $tablet-size){
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
