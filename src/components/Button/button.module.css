@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+  color: #212121;
+  margin: 0;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}
+
+.base {
+  display: block;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(45deg, rgb(64, 101, 94), rgb(54, 110, 110));
+  color: #fafafa;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+.base:hover, .base:focus {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+  background: rgba(166, 176, 174, 0.9);
+}
+.base:disabled {
+  cursor: not-allowed;
+  background: rgba(115, 134, 130, 0.5);
+  color: #fafafa;
+  box-shadow: none;
+}
+@media screen and (min-width: 1200px) {
+  .base {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .base {
+    padding: 15px 35px;
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=button.module.css.map */

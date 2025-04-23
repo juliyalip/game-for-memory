@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+  color: #212121;
+  margin: 0;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}
+
+.stats {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .stats {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=statSection.module.css.map */

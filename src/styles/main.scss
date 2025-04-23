@@ -1,0 +1,35 @@
+$primary-background-color: #fafafa;
+$primary-text-color:  #212121;
+$border-color: #cccccc;
+$button-bg-color:  linear-gradient(45deg, rgb(64, 101, 94), rgb(54, 110, 110));
+$button-hover-color: rgba(166, 176, 174, 0.9);
+$button-disabled-color: rgba(115, 134, 130, 0.5); 
+$heavy-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+$main-cover-gradient: linear-gradient(45deg, rgb(166, 176, 174), rgb(229, 247, 247));
+$hover-cover-gradient: linear-gradient(45deg, rgb(201, 210, 208), rgb(213, 241, 242));
+
+
+$mobile-size: 320px;
+$tablet-size: 768px;
+$desctop-size: 1200px;
+
+html {box-sizing: border-box;}
+
+*,*::before, *::after{box-sizing: inherit;}
+
+body {
+  background-color: $primary-background-color;
+  font-family: Arial, sans-serif;
+  color:  $primary-text-color;
+  margin: 0;
+  font-weight: 600;
+}
+
+li{list-style: none;}
+
+@mixin centered($type){
+  display: $type;
+  margin-left: auto;
+  margin-right: auto;
+
+}

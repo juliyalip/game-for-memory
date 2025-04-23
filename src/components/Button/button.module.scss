@@ -1,0 +1,34 @@
+@use "../../styles/main.scss" as *;
+
+.base {
+  display: block;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  background: $button-bg-color;
+  color: $primary-background-color;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+    background: $button-hover-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background: $button-disabled-color;
+    color: $primary-background-color;
+    box-shadow: none;
+  }
+  @media screen and (min-width: $desctop-size) {
+    font-size: 0.9rem;
+  }
+
+  @media screen and (min-width: $desctop-size) {
+    padding: 15px 35px;
+    font-size: 1rem;
+  }
+}

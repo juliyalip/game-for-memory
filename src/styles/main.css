@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+  color: #212121;
+  margin: 0;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}/*# sourceMappingURL=main.css.map */

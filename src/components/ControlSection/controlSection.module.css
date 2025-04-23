@@ -1,0 +1,60 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+  color: #212121;
+  margin: 0;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  align-items: center;
+  margin-top: 35px;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.sectionBtn {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .sectionBtn {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}/*# sourceMappingURL=controlSection.module.css.map */

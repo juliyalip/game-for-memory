@@ -1,0 +1,20 @@
+@use "../../styles/main.scss" as *;
+
+.stats {
+    @include centered(grid);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    font-size: 0.7rem;
+    text-align: center;
+  
+    @media screen and (max-width: $tablet-size) {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+  
+    @media screen and (min-width: $tablet-size) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      font-size: 1rem;
+    }
+  }

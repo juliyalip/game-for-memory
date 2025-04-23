@@ -1,0 +1,35 @@
+@use "../../styles/main.scss" as *;
+
+.container {
+  @include centered(grid);
+  width: 100%;
+  align-items: center;
+  margin-top: 35px;
+
+  @media screen and (min-width: $mobile-size) {
+    width: $mobile-size;
+  }
+
+  @media screen and (min-width: $tablet-size) {
+    width: $tablet-size;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: $desctop-size) {
+    width: $desctop-size;
+  }
+}
+
+.sectionBtn {
+  @include centered(grid);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: center;
+
+  @media screen and (min-width: $tablet-size) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+

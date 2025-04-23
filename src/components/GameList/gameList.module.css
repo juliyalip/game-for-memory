@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+  color: #212121;
+  margin: 0;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.fadeEnter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fadeEnterActive {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.fadeExit {
+  opacity: 1;
+}
+
+.fadeExitActive {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}/*# sourceMappingURL=gameList.module.css.map */

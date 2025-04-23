@@ -1,0 +1,22 @@
+@use "../../styles/main.scss" as *;
+
+.container {
+  @include centered(block);
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid $border-color;
+  border-radius: 5px;
+
+  @media screen and (min-width: $mobile-size) {
+    width: $mobile-size;
+  }
+  @media screen and (min-width: $tablet-size) {
+    width: $tablet-size;
+    margin-top: 30px;
+  }
+  @media screen and (min-width: $desctop-size) {
+    width: $desctop-size;
+    margin-top: 40px;
+  }
+}
