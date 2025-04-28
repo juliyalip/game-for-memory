@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/game-for-memory/static/css/main.7a35df99.css",
+    "main.css": "/game-for-memory/static/css/main.e4ab1f14.css",
     "main.js": "/game-for-memory/static/js/main.4a8d48ed.js",
     "static/js/453.52374f32.chunk.js": "/game-for-memory/static/js/453.52374f32.chunk.js",
     "index.html": "/game-for-memory/index.html",
-    "main.7a35df99.css.map": "/game-for-memory/static/css/main.7a35df99.css.map",
+    "main.e4ab1f14.css.map": "/game-for-memory/static/css/main.e4ab1f14.css.map",
     "main.4a8d48ed.js.map": "/game-for-memory/static/js/main.4a8d48ed.js.map",
     "453.52374f32.chunk.js.map": "/game-for-memory/static/js/453.52374f32.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a35df99.css",
+    "static/css/main.e4ab1f14.css",
     "static/js/main.4a8d48ed.js"
   ]
 }
