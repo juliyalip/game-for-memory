@@ -1,5 +1,4 @@
 import { useCallback , useMemo } from "react";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import GameItem from "../GameItem/GameItem";
 import { useStore } from '../../store/store'
 import Container from "../Container/Container";
@@ -24,13 +23,13 @@ const GameList = () => {
 
   return (
     <Container>
-      <TransitionGroup component="ul" className={`${style.container} ${gridClass}`}>
+      <ul className={`${style.container} ${gridClass}`}>
         {cards.map((card) => (
-          <CSSTransition key={card.id} timeout={300} classNames={style.fade} unmountOnExit>
-            <GameItem onChange={turnOverCard} item={card} />
-          </CSSTransition>
+          
+            <GameItem key={card.id} onChange={turnOverCard} item={card} />
+       
         ))}
-      </TransitionGroup>
+      </ul>
     </Container>
   );
 };

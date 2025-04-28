@@ -16,8 +16,8 @@ const ControlSection = () => {
       return;
     }
     const level = Number(e.currentTarget.dataset.level) as 1 | 2;
-    setIsActive(true);
     setLevel(level);
+    setIsActive(true);
   };
 
   const stopGame = useCallback(() => {

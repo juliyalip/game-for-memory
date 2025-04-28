@@ -66,4 +66,6 @@ export const useStore = create<StoreState>((set, get) => ({
             selectedCards: refreshSelectedCards,
         };
     }),
+
+    
 }));
